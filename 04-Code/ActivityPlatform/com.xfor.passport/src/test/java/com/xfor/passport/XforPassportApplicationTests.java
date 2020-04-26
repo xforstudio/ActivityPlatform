@@ -1,10 +1,10 @@
-package com.xfor.activityplatform.portal;
+package com.xfor.passport;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApplicationTests {
+class XforPassportApplicationTests {
 
     @Test
     void contextLoads() {

@@ -1,13 +1,13 @@
-package com.xfor.activityplatform.passport;
+package com.xfor.payment;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class XforPaymentApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(XforPaymentApplication.class, args);
     }
 
 }
