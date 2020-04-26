@@ -3,8 +3,6 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/com.xfor.passport/pom.xml" />
-        <option value="$PROJECT_DIR$/com.xfor.payment/pom.xml" />
         <option value="$PROJECT_DIR$/com.xfor.activityplatform.portal/pom.xml" />
       </list>
     </option>
