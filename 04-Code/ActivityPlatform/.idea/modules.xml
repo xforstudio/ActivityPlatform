@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/com.xfor.activityplatform.portal/com.xfor.activityplatform.portal.iml" filepath="$PROJECT_DIR$/com.xfor.activityplatform.portal/com.xfor.activityplatform.portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.xfor.passport/com.xfor.passport.iml" filepath="$PROJECT_DIR$/com.xfor.passport/com.xfor.passport.iml" />
     </modules>
   </component>
 </project>

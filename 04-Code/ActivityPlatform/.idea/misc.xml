@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/com.xfor.activityplatform.portal/pom.xml" />
+        <option value="$PROJECT_DIR$/com.xfor.passport/pom.xml" />
       </list>
     </option>
   </component>

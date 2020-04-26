@@ -1,4 +1,4 @@
-package com.xfor.activityplatform.portal;
+package com.xfor.activityplatform.portal.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
