@@ -7,10 +7,19 @@ import com.xfor.infrastructure.model.IDTypeNOEnum;
  */
 public class PassportID {
 
+    private String sid;
     private String passportSID;  //通行证唯一标识
     private IDTypeNOEnum idTypeNO;  //证件类型编号
     private String idCode;  //证件号
     private boolean primary;  //是否为首选证件
+
+    public String getSID() {
+        return sid;
+    }
+
+    public void setSID(String sid) {
+        this.sid = sid;
+    }
 
     public String getPassportSID() {
         return passportSID;

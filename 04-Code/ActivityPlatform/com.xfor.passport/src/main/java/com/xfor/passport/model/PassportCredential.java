@@ -1,6 +1,6 @@
 package com.xfor.passport.model;
 
-import com.xfor.passport.util.StringUtil;
+import com.xfor.infrastructure.util.StringUtil;
 
 /**
  * 通行证凭据

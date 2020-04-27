@@ -1,4 +1,4 @@
-package com.xfor.passport.util;
+package com.xfor.infrastructure.util;
 
 /**
  *

@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/com.xfor.infrastructure/com.xfor.infrastructure.iml" filepath="$PROJECT_DIR$/com.xfor.infrastructure/com.xfor.infrastructure.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.xfor.passport/com.xfor.passport.iml" filepath="$PROJECT_DIR$/com.xfor.passport/com.xfor.passport.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.xfor.payment/com.xfor.payment.iml" filepath="$PROJECT_DIR$/com.xfor.payment/com.xfor.payment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.xfor.infrastructure/xfor-infrastructure.iml" filepath="$PROJECT_DIR$/com.xfor.infrastructure/xfor-infrastructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.xfor.payment/xfor-payment.iml" filepath="$PROJECT_DIR$/com.xfor.payment/xfor-payment.iml" />
     </modules>
   </component>
 </project>

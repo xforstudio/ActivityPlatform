@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="com.xfor.passport" />
+        <module name="xfor-infrastructure" />
+        <module name="xfor-payment" />
         <module name="com.xfor.payment" />
         <module name="com.xfor.activityplatform.portal" />
-        <module name="xfor-passport" />
         <module name="com.xfor.infrastructure" />
+        <module name="xfor-passport" />
         <module name="xfor-activity-portal" />
       </profile>
     </annotationProcessing>
@@ -20,7 +22,9 @@
       <module name="com.xfor.passport" target="13" />
       <module name="com.xfor.payment" target="13" />
       <module name="xfor-activity-portal" target="13" />
+      <module name="xfor-infrastructure" target="14" />
       <module name="xfor-passport" target="14" />
+      <module name="xfor-payment" target="13" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -30,7 +34,9 @@
       <module name="com.xfor.passport" options="-parameters" />
       <module name="com.xfor.payment" options="-parameters" />
       <module name="xfor-activity-portal" options="-parameters" />
+      <module name="xfor-infrastructure" options="-parameters" />
       <module name="xfor-passport" options="-parameters" />
+      <module name="xfor-payment" options="-parameters" />
     </option>
   </component>
 </project>

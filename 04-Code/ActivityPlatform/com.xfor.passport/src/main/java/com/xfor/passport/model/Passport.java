@@ -4,23 +4,26 @@ import com.xfor.infrastructure.model.IDTypeNOEnum;
 import com.xfor.infrastructure.model.IDateTimeProvider;
 import com.xfor.infrastructure.model.SexEnum;
 import com.xfor.infrastructure.model.Token;
-import com.xfor.passport.util.StringUtil;
+import com.xfor.infrastructure.util.RandomUtil;
+import com.xfor.infrastructure.util.StringUtil;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Random;
 
 /**
  * 通行证
  */
 public class Passport {
 
-    public static void _validatePassword(String password){
+    public static void _validatePassword(String password) {
         return;
     }
 
     public static String _newSN() {
-        string sn = string.Format("{0}{1:D6}", DateTime.Now.ToString("yyyyMMddHHmmss"), new Random().Next(0, 999999));
-        return sn;
+        String timeText = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+        int seq = RandomUtil._nextInt(1, 999999);
+        String seqText = String.format("%06d", seq);
+        return timeText + seqText;
     }
 
     private String sid;  //唯一标识
@@ -45,13 +48,12 @@ public class Passport {
     public Passport() {
     }
 
-    public Passport(String sid)
-    {
-        this.SID = sid;
+    public Passport(String sid) {
+        this.setSID(sid);
     }
 
     public void validatePassword() {
-        _ValidatePassword(this.Password);
+        _validatePassword(this.getPassword());
     }
 
     public PassportUser getPassportUser() {
