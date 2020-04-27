@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/com.xfor.activityplatform.portal/com.xfor.activityplatform.portal.iml" filepath="$PROJECT_DIR$/com.xfor.activityplatform.portal/com.xfor.activityplatform.portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.xfor.infrastructure/com.xfor.infrastructure.iml" filepath="$PROJECT_DIR$/com.xfor.infrastructure/com.xfor.infrastructure.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.xfor.passport/com.xfor.passport.iml" filepath="$PROJECT_DIR$/com.xfor.passport/com.xfor.passport.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.xfor.payment/com.xfor.payment.iml" filepath="$PROJECT_DIR$/com.xfor.payment/com.xfor.payment.iml" />
-      <module fileurl="file://$PROJECT_DIR$/com.xfor.activityplatform.portal/com.xfor.activityplatform.portal.iml" filepath="$PROJECT_DIR$/com.xfor.activityplatform.portal/com.xfor.activityplatform.portal.iml" />
     </modules>
   </component>
 </project>

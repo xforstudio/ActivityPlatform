@@ -6,6 +6,7 @@
         <option value="$PROJECT_DIR$/com.xfor.activityplatform.portal/pom.xml" />
         <option value="$PROJECT_DIR$/com.xfor.passport/pom.xml" />
         <option value="$PROJECT_DIR$/com.xfor.payment/pom.xml" />
+        <option value="$PROJECT_DIR$/com.xfor.infrastructure/pom.xml" />
       </list>
     </option>
   </component>

@@ -6,14 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="com.xfor.payment" />
-        <module name="xfor-passport" />
-        <module name="com.xfor.activityplatform.portal" />
-        <module name="xfor-activity-portal" />
         <module name="com.xfor.passport" />
+        <module name="com.xfor.payment" />
+        <module name="com.xfor.activityplatform.portal" />
+        <module name="xfor-passport" />
+        <module name="com.xfor.infrastructure" />
+        <module name="xfor-activity-portal" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="14">
+      <module name="com.xfor.activityplatform.portal" target="13" />
+      <module name="com.xfor.infrastructure" target="14" />
       <module name="com.xfor.passport" target="13" />
       <module name="com.xfor.payment" target="13" />
       <module name="xfor-activity-portal" target="13" />
@@ -22,6 +25,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="com.xfor.activityplatform.portal" options="-parameters" />
+      <module name="com.xfor.infrastructure" options="-parameters" />
       <module name="com.xfor.passport" options="-parameters" />
       <module name="com.xfor.payment" options="-parameters" />
       <module name="xfor-activity-portal" options="-parameters" />
