@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/com.xfor.payment/com.xfor.payment.iml" filepath="$PROJECT_DIR$/com.xfor.payment/com.xfor.payment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.xfor.activityplatform.portal/xfor-activity-portal.iml" filepath="$PROJECT_DIR$/com.xfor.activityplatform.portal/xfor-activity-portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.xfor.passport/xfor-passport.iml" filepath="$PROJECT_DIR$/com.xfor.passport/xfor-passport.iml" />
+    </modules>
+  </component>
+</project>
