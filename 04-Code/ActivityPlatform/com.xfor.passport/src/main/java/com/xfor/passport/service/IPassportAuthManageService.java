@@ -5,7 +5,7 @@ package com.xfor.passport.service;
  */
 public interface IPassportAuthManageService {
 
-    String GetLoginTokenByPassportAuthCode(String passportAuthCode, String categoryID);
+    String getLoginTokenByPassportAuthCode(String passportAuthCode, String categoryID);
 
-    String GetPassportAuthCodeByLoginToken(String loginToken, String categoryID);
+    String getPassportAuthCodeByLoginToken(String loginToken, String categoryID);
 }

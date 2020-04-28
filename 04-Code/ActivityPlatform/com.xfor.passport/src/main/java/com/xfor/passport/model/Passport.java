@@ -1,9 +1,6 @@
 package com.xfor.passport.model;
 
-import com.xfor.infrastructure.model.IDTypeNOEnum;
-import com.xfor.infrastructure.model.IDateTimeProvider;
-import com.xfor.infrastructure.model.SexEnum;
-import com.xfor.infrastructure.model.Token;
+import com.xfor.infrastructure.model.*;
 import com.xfor.infrastructure.util.RandomUtil;
 import com.xfor.infrastructure.util.StringUtil;
 
@@ -17,6 +14,10 @@ public class Passport {
 
     public static void _validatePassword(String password) {
         return;
+    }
+
+    public static String _newSID() {
+        return SID._newSID();
     }
 
     public static String _newSN() {
@@ -126,7 +127,7 @@ public class Passport {
         this.setLoginTime(null);
     }
 
-    public boolean MatchPassword(String password) {
+    public boolean matchPassword(String password) {
         return StringUtil._equals(this.getPassword(), password);
     }
 
