@@ -1,7 +1,14 @@
 package com.xfor.passport.repository;
 
+import com.xfor.infrastructure.service.ServiceContext;
 import com.xfor.passport.model.PassportAuth;
-import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface IPassportAuthRepository extends JpaRepository<PassportAuth, String> {
+/**
+ *
+ */
+public interface IPassportAuthRepository {
+
+    String getLoginTokenByPassportAuthCode(ServiceContext sctx, String passportAuthCode, String categoryID);
+
+    String getPassportAuthCodeByLoginToken(ServiceContext sctx, String loginToken, String categoryID);
 }

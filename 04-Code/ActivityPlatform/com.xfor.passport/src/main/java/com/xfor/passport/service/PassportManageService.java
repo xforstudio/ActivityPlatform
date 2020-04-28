@@ -3,10 +3,7 @@ package com.xfor.passport.service;
 import com.xfor.infrastructure.model.IDateTimeProvider;
 import com.xfor.infrastructure.model.TextCaptcha;
 import com.xfor.infrastructure.service.*;
-import com.xfor.passport.model.Passport;
-import com.xfor.passport.model.PassportException;
-import com.xfor.passport.model.PassportLoginSession;
-import com.xfor.passport.model.PassportRegist;
+import com.xfor.passport.model.*;
 import com.xfor.passport.repository.IPassportAuthCategoryRepository;
 import com.xfor.passport.repository.IPassportAuthRepository;
 import com.xfor.passport.repository.IPassportIDRepository;
@@ -63,13 +60,13 @@ public class PassportManageService extends BaseService implements IPassportAuthM
     //判断登录标识是否有效
     public boolean isLoginTokenValid(String loginToken) {
         ServiceContext sctx = this.doGetServiceContext();
-        Boolean isValid = this.passportRepository.ExistsLoginToken(loginToken, sctx);
+        Boolean isValid = this.passportRepository.existsLoginToken(sctx, loginToken);
         return isValid;
     }
 
     public void verifyLoginToken(String loginToken) throws PassportException {
         ServiceContext sctx = this.doGetServiceContext();
-        Boolean isValid = this.passportRepository.ExistsLoginToken(loginToken, sctx);
+        Boolean isValid = this.passportRepository.existsLoginToken(sctx, loginToken);
         if (!isValid) {
             throw new PassportException("会话标识无效");
         }
@@ -84,7 +81,7 @@ public class PassportManageService extends BaseService implements IPassportAuthM
             throws PassportException {
         ServiceContext sctx = this.doGetServiceContext();
         //获取Passport
-        Passport passport = this.passportRepository.GetPassportByCredential(credential, sctx);
+        Passport passport = this.passportRepository.getPassportByCredential(sctx, credential);
         if (passport == null) {
             throw new PassportException("通行证不存在");
         }
@@ -93,9 +90,9 @@ public class PassportManageService extends BaseService implements IPassportAuthM
             throw new PassportException("密码错误");
         }
         //登录
-        PassportLoginSession loginSession = passport.Login(this.dateTimeProvider);
+        PassportLoginSession loginSession = passport.login(this.dateTimeProvider);
         //保存通行证
-        this.passportRepository.SavePassport(passport, sctx);
+        this.passportRepository.savePassport(sctx, passport);
         //
         return loginSession;
     }
@@ -110,14 +107,14 @@ public class PassportManageService extends BaseService implements IPassportAuthM
             throw new PassportException("验证码无效");
         }
         //获取通行证
-        Passport passport = this.passportRepository.GetPassportByMobile(mobile, sctx);
+        Passport passport = this.passportRepository.getPassportByMobile(sctx, mobile);
         if (passport == null) {
             throw new PassportException("通行证不存在");
         }
         //登录
         PassportLoginSession loginSession = passport.login(this.dateTimeProvider);
         //保存通行证
-        this.passportRepository.SavePassport(passport, sctx);
+        this.passportRepository.savePassport(sctx, passport);
         //
         return loginSession;
     }
@@ -127,14 +124,14 @@ public class PassportManageService extends BaseService implements IPassportAuthM
             throws PassportException {
         ServiceContext sctx = this.doGetServiceContext();
         //获取通行证
-        Passport passport = this.passportRepository.GetPassportByLoginToken(loginToken, sctx);
+        Passport passport = this.passportRepository.getPassportByLoginToken(sctx, loginToken);
         if (passport == null) {
             throw new PassportException("登录会话标识无效");
         }
         //登出
         passport.logout(loginToken);
         //保存通行证
-        this.passportRepository.SavePassport(passport, sctx);
+        this.passportRepository.savePassport(sctx, passport);
     }
 
     //发送短信验证码
@@ -150,14 +147,14 @@ public class PassportManageService extends BaseService implements IPassportAuthM
         passportRegist.validate();
         //业务验证（手机）
         if (passportRegist.isMobileSet()) {
-            boolean existsMobile = this.passportRepository.ExistsMobile(passportRegist.Mobile, sctx);
+            boolean existsMobile = this.passportRepository.existsMobile(sctx, passportRegist.getMobile());
             if (existsMobile) {
                 throw new PassportException("手机号已存在");
             }
         }
         //业务验证（邮箱）
         if (passportRegist.isEmailSet()) {
-            boolean existsEmail = this.passportRepository.ExistsEmail(passportRegist.Email, sctx);
+            boolean existsEmail = this.passportRepository.existsEmail(sctx, passportRegist.getEmail());
             if (existsEmail) {
                 throw new PassportException("邮箱已存在");
             }
@@ -165,284 +162,194 @@ public class PassportManageService extends BaseService implements IPassportAuthM
         //创建通行证
         Passport passport = passportRegist.createPassport(this.dateTimeProvider);
         //保存通行证
-        this.passportRepository.SavePassport(passport, sctx);
+        this.passportRepository.savePassport(sctx, passport);
     }
-    
-    /// <summary>
-    /// 重置密码（手机认证）
-    /// </summary>
-    /// <param name="newPwd"></param>
-    /// <param name="mobile"></param>
-    /// <param name="captcha"></param>
-    public void ResetPasswordWithMobile(string newPwd, string mobile, string captcha)
-    {
+
+    //重置密码（手机认证）
+    public void resetPasswordWithMobile(String newPwd, String mobile, String captcha)
+            throws PassportException {
         //检查验证码
-        string captcha_pre = this.textCaptchaLogService.PickCaptcha("_reset_pwd_mobile", mobile);
-        if (captcha == null || captcha != captcha_pre)
-        {
-            throw new System.Exception("验证码无效");
+        String captcha_pre = this.textCaptchaLogService.pickCaptcha("_reset_pwd_mobile", mobile);
+        if (captcha == null || captcha != captcha_pre) {
+            throw new PassportException("验证码无效");
         }
         //
-        ServiceContext sctx = this.DoGetServiceContext();
+        ServiceContext sctx = this.doGetServiceContext();
         //获取通行证
-        Passport passport = this.passportRepository.GetPassportByMobile(mobile, sctx);
-        if (passport == null)
-        {
-            throw new System.Exception("通行证不存在");
+        Passport passport = this.passportRepository.getPassportByMobile(sctx, mobile);
+        if (passport == null) {
+            throw new PassportException("通行证不存在");
         }
         //设置密码
-        passport.SetPassword(newPwd, this.dateTimeProvider);
+        passport.setPassword(newPwd, this.dateTimeProvider);
         //保存通行证
-        this.passportRepository.SavePassport(passport, sctx);
+        this.passportRepository.savePassport(sctx, passport);
     }
 
-    /// <summary>
-    /// 重置密码（邮箱认证）
-    /// </summary>
-    /// <param name="newPwd"></param>
-    /// <param name="mobile"></param>
-    /// <param name="captcha"></param>
-    public void ResetPasswordWithEmail(string newPwd, string email, string captcha)
-    {
+    //重置密码（邮箱认证）
+    public void resetPasswordWithEmail(String newPwd, String email, String captcha)
+            throws PassportException {
         //检查验证码
-        string captcha_pre = this.textCaptchaLogService.PickCaptcha("_reset_pwd_email", email);
-        if (captcha == null || captcha != captcha_pre)
-        {
-            throw new System.Exception("验证码无效");
+        String captcha_pre = this.textCaptchaLogService.pickCaptcha("_reset_pwd_email", email);
+        if (captcha == null || captcha != captcha_pre) {
+            throw new PassportException("验证码无效");
         }
         //
-        ServiceContext sctx = this.DoGetServiceContext();
+        ServiceContext sctx = this.doGetServiceContext();
         //获取通行证
-        Passport passport = this.passportRepository.GetPassportByEmail(email, sctx);
-        if (passport == null)
-        {
-            throw new System.Exception("通行证不存在");
+        Passport passport = this.passportRepository.getPassportByEmail(sctx, email);
+        if (passport == null) {
+            throw new PassportException("通行证不存在");
         }
         //设置密码
-        passport.SetPassword(newPwd, this.dateTimeProvider);
+        passport.setPassword(newPwd, this.dateTimeProvider);
         //保存通行证
-        this.passportRepository.SavePassport(passport, sctx);
+        this.passportRepository.savePassport(sctx, passport);
     }
 
-    /// <summary>
-    /// 发送重置密码短信验证码
-    /// </summary>
-    /// <param name="mobile"></param>
-    public void SendSmsCaptchaWithResetPassword(string mobile)
-    {
-        this.DoSendSmsCaptcha(mobile, "_reset_pwd_mobile");
+    //发送重置密码短信验证码
+    public void sendSmsCaptchaWithResetPassword(String mobile) {
+        this.doSendSmsCaptcha(mobile, "_reset_pwd_mobile");
     }
 
-    /// <summary>
-    /// 发送重置密码邮件验证码
-    /// </summary>
-    /// <param name="email"></param>
-    public void SendEmailCaptchaWithResetPassword(string email)
-    {
-        this.DoSendEmailCaptcha(email, "_reset_pwd_email");
+    //发送重置密码邮件验证码
+    public void SendEmailCaptchaWithResetPassword(String email) {
+        this.doSendEmailCaptcha(email, "_reset_pwd_email");
     }
 
-        #endregion
-
-        #region 信息管理
-
-    public Passport GetPassportByPassportSID(string passportSID)
-    {
-        ServiceContext sctx = this.DoGetServiceContext();
+    public Passport getPassportByPassportSID(String passportSID) {
+        ServiceContext sctx = this.doGetServiceContext();
         //获取通行证
-        Passport passport = this.passportRepository.GetPassportBySID(passportSID, sctx);
+        Passport passport = this.passportRepository.getPassportBySID(sctx, passportSID);
         return passport;
     }
 
-    public string GetPassportSIDByLoginToken(string loginToken)
-    {
-        ServiceContext sctx = this.DoGetServiceContext();
+    public String getPassportSIDByLoginToken(String loginToken) {
+        ServiceContext sctx = this.doGetServiceContext();
         //获取通行证
-        Passport passport = this.passportRepository.GetPassportByLoginToken(loginToken, sctx);
-        return passport != null ? passport.SID : null;
+        Passport passport = this.passportRepository.getPassportByLoginToken(sctx, loginToken);
+        return passport != null ? passport.getSID() : null;
     }
 
-    public Passport GetPassportByLoginToken(string loginToken)
-    {
-        ServiceContext sctx = this.DoGetServiceContext();
+    public Passport getPassportByLoginToken(String loginToken) {
+        ServiceContext sctx = this.doGetServiceContext();
         //获取通行证
-        Passport passport = this.passportRepository.GetPassportByLoginToken(loginToken, sctx);
+        Passport passport = this.passportRepository.getPassportByLoginToken(sctx, loginToken);
         return passport;
     }
 
-    /// <summary>
-    /// 设置用户信息
-    /// </summary>
-    /// <param name="passportUser"></param>
-    public void SetPassportUser(PassportUser passportUser)
-    {
-        ServiceContext sctx = this.DoGetServiceContext();
+    //设置用户信息
+    public void setPassportUser(PassportUser passportUser) throws PassportException {
+        ServiceContext sctx = this.doGetServiceContext();
         //获取通行证
-        Passport passport = this.passportRepository.GetPassportBySID(passportUser.PassportSID, sctx);
-        if (passport == null)
-        {
-            throw new System.Exception("通行证不存在");
+        Passport passport = this.passportRepository.getPassportBySID(sctx, passportUser.getPassportSID());
+        if (passport == null) {
+            throw new PassportException("通行证不存在");
         }
         //设置用户信息
-        passport.SetPassportUser(passportUser, this.dateTimeProvider);
+        passport.setPassportUser(passportUser, this.dateTimeProvider);
         //保存通行证
-        this.passportRepository.SavePassport(passport, sctx);
+        this.passportRepository.savePassport(sctx, passport);
     }
 
-    ///// <summary>
-    ///// 添加证件
-    ///// </summary>
-    ///// <param name="passportID"></param>
-    //public void AddPassportID(PassportID passportID)
-    //{
-    //    ServiceContext sctx = ServiceContext.Empty();
-    //    List<PassportID> passportIDs = this.passportRepository.GetPassportIDsByPassportSID(passportID.PassportSID, sctx);
-    //    passportID = new PassportIDList(passportIDs).AddPassportID(passportID);
-    //    this.passportRepository.SavePassportID(passportID, sctx);
-    //}
-
-    ///// <summary>
-    ///// 移除证件
-    ///// </summary>
-    ///// <param name="passportID"></param>
-    //public void RemovePassportID(PassportID passportID)
-    //{
-    //    ServiceContext sctx = ServiceContext.Empty();
-    //    this.passportRepository.DeletePassportIDByIDTypeNO(passportID.PassportSID, passportID.IDTypeNO, sctx);
-    //}
-
-    /// <summary>
-    /// 设置用户名
-    /// </summary>
-    /// <param name="username"></param>
+    //设置用户名
     public void SetUsername(PassportCredential passportCredential)
-    {
-        ServiceContext sctx = this.DoGetServiceContext();
+            throws PassportException {
+        ServiceContext sctx = this.doGetServiceContext();
         //验证用户名
-        bool existsUsername = this.passportRepository.ExistsUsername(passportCredential.Username, sctx);
-        if (existsUsername)
-        {
-            throw new System.Exception("用户名已存在");
+        boolean existsUsername = this.passportRepository.existsUsername(sctx, passportCredential.getUsername());
+        if (existsUsername) {
+            throw new PassportException("用户名已存在");
         }
         //获取通行证
-        Passport passport = this.passportRepository.GetPassportBySID(passportCredential.PassportSID, sctx);
-        if (passport == null)
-        {
-            throw new System.Exception("通行证不存在");
+        Passport passport = this.passportRepository.getPassportBySID(sctx, passportCredential.getPassportSID());
+        if (passport == null) {
+            throw new PassportException("通行证不存在");
         }
         //设置用户名
-        passport.SetUsername(passportCredential.Username, this.dateTimeProvider);
+        passport.setUsername(passportCredential.getUsername(), this.dateTimeProvider);
         //保存通行证
-        this.passportRepository.SavePassport(passport, sctx);
+        this.passportRepository.savePassport(sctx, passport);
     }
 
-    /// <summary>
-    /// 设置手机
-    /// </summary>
-    /// <param name="passportCredential"></param>
+    //设置手机
     public void SetMobile(PassportCredential passportCredential)
-    {
+            throws PassportException {
         //检查验证码
-        string captcha_pre = this.textCaptchaLogService.PickCaptcha("_set_mobile", passportCredential.Mobile);
-        if (!passportCredential.MatchMobileCaptcha(captcha_pre))
-        {
-            throw new System.Exception("验证码无效");
+        String captcha_pre = this.textCaptchaLogService.pickCaptcha("_set_mobile", passportCredential.getMobile());
+        if (!passportCredential.matchMobileCaptcha(captcha_pre)) {
+            throw new PassportException("验证码无效");
         }
         //
-        ServiceContext sctx = this.DoGetServiceContext();
+        ServiceContext sctx = this.doGetServiceContext();
         //获取通行证
-        Passport passport = this.passportRepository.GetPassportBySID(passportCredential.PassportSID, sctx);
-        if (passport == null)
-        {
-            throw new System.Exception("通行证不存在");
+        Passport passport = this.passportRepository.getPassportBySID(sctx, passportCredential.getPassportSID());
+        if (passport == null) {
+            throw new PassportException("通行证不存在");
         }
         //设置手机
-        passport.SetMobile(passportCredential.Mobile, PassportCheckStateEnum.Checked, this.dateTimeProvider);
+        passport.setMobile(passportCredential.getMobile(), PassportCheckStateEnum.Checked, this.dateTimeProvider);
         //保存通行证
-        this.passportRepository.SavePassport(passport, sctx);
+        this.passportRepository.savePassport(sctx, passport);
     }
 
-    /// <summary>
-    /// 发送设置手机短信验证码
-    /// </summary>
-    /// <param name="mobile"></param>
-    public void SendSmsCaptchaWithSetMobile(string mobile)
-    {
-        this.DoSendSmsCaptcha(mobile, "_set_mobile");
+    //发送设置手机短信验证码
+    public void sendSmsCaptchaWithSetMobile(String mobile) {
+        this.doSendSmsCaptcha(mobile, "_set_mobile");
     }
 
-    /// <summary>
-    /// 设置邮箱
-    /// </summary>
-    /// <param name="passportCredential"></param>
-    public void SetEmail(PassportCredential passportCredential)
-    {
+    //设置邮箱
+    public void setEmail(PassportCredential passportCredential)
+            throws PassportException {
         //检查验证码
-        string captcha_pre = this.textCaptchaLogService.PickCaptcha("_set_email", passportCredential.Email);
-        if (!passportCredential.MatchEmailCaptcha(captcha_pre))
-        {
-            throw new System.Exception("验证码无效");
+        String captcha_pre = this.textCaptchaLogService.pickCaptcha("_set_email", passportCredential.getEmail());
+        if (!passportCredential.matchEmailCaptcha(captcha_pre)) {
+            throw new PassportException("验证码无效");
         }
         //
-        ServiceContext sctx = this.DoGetServiceContext();
+        ServiceContext sctx = this.doGetServiceContext();
         //获取通行证
-        Passport passport = this.passportRepository.GetPassportBySID(passportCredential.PassportSID, sctx);
-        if (passport == null)
-        {
-            throw new System.Exception("通行证不存在");
+        Passport passport = this.passportRepository.getPassportBySID(sctx, passportCredential.getPassportSID());
+        if (passport == null) {
+            throw new PassportException("通行证不存在");
         }
         //设置邮箱
-        passport.SetEmail(passportCredential.Email, PassportCheckStateEnum.Checked, this.dateTimeProvider);
+        passport.setEmail(passportCredential.getEmail(), PassportCheckStateEnum.Checked, this.dateTimeProvider);
         //保存通行证
-        this.passportRepository.SavePassport(passport, sctx);
+        this.passportRepository.savePassport(sctx, passport);
     }
 
-    /// <summary>
-    /// 发送设置邮箱邮件验证码
-    /// </summary>
-    /// <param name="email"></param>
-    public void SendEmailCaptchaWithSetEmail(string email)
-    {
-        this.DoSendEmailCaptcha(email, "_set_email");
+    //发送设置邮箱邮件验证码
+    public void sendEmailCaptchaWithSetEmail(String email) {
+        this.doSendEmailCaptcha(email, "_set_email");
     }
 
-    /// <summary>
-    /// 设置密码
-    /// </summary>
-    /// <param name="pwdOld"></param>
-    /// <param name="pwdNew"></param>
-    public void SetPassword(string passportSID, string pwdNew)
-    {
-        ServiceContext sctx = this.DoGetServiceContext();
+    //设置密码
+    public void setPassword(String passportSID, String pwdNew) {
+        ServiceContext sctx = this.doGetServiceContext();
         //获取通行证
-        Passport passport = this.passportRepository.GetPassportBySID(passportSID, sctx);
+        Passport passport = this.passportRepository.getPassportBySID(sctx, passportSID);
         //设置新密码
-        passport.SetPassword(pwdNew, this.dateTimeProvider);
+        passport.setPassword(pwdNew, this.dateTimeProvider);
         //保存通行证
-        this.passportRepository.SavePassport(passport, sctx);
+        this.passportRepository.savePassport(sctx, passport);
     }
 
-        #endregion
-
-        #region 授权管理
-
-    public string GetLoginTokenByPassportAuthCode(
-            string passportAuthCode,
-            string categoryID)
-    {
-        ServiceContext sctx = this.DoGetServiceContext();
-        var result = this.passportRepository.GetLoginTokenByPassportAuthCode(passportAuthCode, categoryID, sctx);
+    public String getLoginTokenByPassportAuthCode(String passportAuthCode, String categoryID) {
+        ServiceContext sctx = this.doGetServiceContext();
+        String result = this.passportAuthRepository.getLoginTokenByPassportAuthCode(
+                sctx,
+                passportAuthCode,
+                categoryID);
         return result;
     }
 
-    public string GetPassportAuthCodeByLoginToken(
-            string loginToken,
-            string categoryID)
-    {
-        ServiceContext sctx = this.DoGetServiceContext();
-        var result = this.passportRepository.GetPassportAuthCodeByLoginToken(loginToken, categoryID, sctx);
+    public String getPassportAuthCodeByLoginToken(String loginToken, String categoryID) {
+        ServiceContext sctx = this.doGetServiceContext();
+        String result = this.passportAuthRepository.getPassportAuthCodeByLoginToken(
+                sctx,
+                loginToken,
+                categoryID);
         return result;
     }
-
-        #endregion
 }

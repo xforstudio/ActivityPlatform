@@ -17,11 +17,11 @@ public class PassportCredential {
     public PassportCredential() {
     }
 
-    public Boolean MatchMobileCaptcha(String captcha) {
+    public Boolean matchMobileCaptcha(String captcha) {
         return StringUtil._equals(this.getMobileCaptcha(), captcha);
     }
 
-    public Boolean MatchEmailCaptcha(String captcha) {
+    public Boolean matchEmailCaptcha(String captcha) {
         return StringUtil._equals(this.getEmailCaptcha(), captcha);
     }
 

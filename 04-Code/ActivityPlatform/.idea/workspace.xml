@@ -21,10 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7637a34b-c1a1-47a3-b084-436cdd67f81d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.infrastructure/src/main/java/com/xfor/infrastructure/util/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.infrastructure/src/main/java/com/xfor/infrastructure/util/StringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/Passport.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/Passport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportRegist.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportRegist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/service/IPassportAuthManageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/service/IPassportAuthManageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportCredential.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportCredential.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/IPassportAuthCategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/IPassportAuthCategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/IPassportAuthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/IPassportAuthRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/IPassportIDRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/IPassportIDRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/IPassportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/IPassportRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/service/PassportManageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/service/PassportManageService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +83,7 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.XforActivityPortalApplication">
+  <component name="RunManager" selected="Spring Boot.XforPassportApplication">
     <configuration name="XforActivityPortalApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="com.xfor.activityplatform.portal" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.xfor.activityplatform.portal.XforActivityPortalApplication" />
@@ -129,7 +130,7 @@
       <workItem from="1587952069192" duration="5082000" />
       <workItem from="1587957282994" duration="512000" />
       <workItem from="1587957898943" duration="11009000" />
-      <workItem from="1587986831862" duration="14816000" />
+      <workItem from="1587986831862" duration="20904000" />
     </task>
     <servers />
   </component>
