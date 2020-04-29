@@ -8,17 +8,29 @@ import com.xfor.passport.repository.IPassportAuthCategoryRepository;
 import com.xfor.passport.repository.IPassportAuthRepository;
 import com.xfor.passport.repository.IPassportIDRepository;
 import com.xfor.passport.repository.IPassportRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class PassportManageService extends BaseService implements IPassportAuthManageService {
 
+    @Autowired
     private IPassportRepository passportRepository;
+    @Autowired
     private IPassportAuthRepository passportAuthRepository;
+    @Autowired
     private IPassportAuthCategoryRepository passportAuthCategoryRepository;
+    @Autowired
     private IPassportIDRepository passportIDRepository;
+    @Autowired
     private ISmsService smsService;
+    @Autowired
     private IEmailService emailService;
+    @Autowired
     private ITextCaptchaLogService textCaptchaLogService;
+    @Autowired
     private IDateTimeProvider dateTimeProvider;
+
+    public PassportManageService() {
+    }
 
     public PassportManageService(
         IPassportRepository passportRepository,
@@ -213,7 +225,7 @@ public class PassportManageService extends BaseService implements IPassportAuthM
     }
 
     //发送重置密码邮件验证码
-    public void SendEmailCaptchaWithResetPassword(String email) {
+    public void sendEmailCaptchaWithResetPassword(String email) {
         this.doSendEmailCaptcha(email, "_reset_pwd_email");
     }
 
@@ -253,7 +265,7 @@ public class PassportManageService extends BaseService implements IPassportAuthM
     }
 
     //设置用户名
-    public void SetUsername(PassportCredential passportCredential)
+    public void setUsername(PassportCredential passportCredential)
             throws PassportException {
         ServiceContext sctx = this.doGetServiceContext();
         //验证用户名
@@ -273,7 +285,7 @@ public class PassportManageService extends BaseService implements IPassportAuthM
     }
 
     //设置手机
-    public void SetMobile(PassportCredential passportCredential)
+    public void setMobile(PassportCredential passportCredential)
             throws PassportException {
         //检查验证码
         String captcha_pre = this.textCaptchaLogService.pickCaptcha("_set_mobile", passportCredential.getMobile());

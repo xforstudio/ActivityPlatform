@@ -1,6 +1,8 @@
 package com.xfor.passport.controller.api;
 
 import com.xfor.passport.service.IPassportAuthManageService;
+import com.xfor.passport.service.PassportAuthManageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -9,9 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PassportAuthManageApiController {
 
-    private IPassportAuthManageService passportAuthManageService;
+    @Autowired
+    private PassportAuthManageService passportAuthManageService;
 
-    public PassportAuthManageApiController(IPassportAuthManageService passportAuthManageService) {
+    public PassportAuthManageApiController() {
+    }
+
+    public PassportAuthManageApiController(PassportAuthManageService passportAuthManageService) {
         this.passportAuthManageService = passportAuthManageService;
     }
 

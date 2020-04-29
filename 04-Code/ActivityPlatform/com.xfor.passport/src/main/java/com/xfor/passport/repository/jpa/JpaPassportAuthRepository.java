@@ -2,9 +2,11 @@ package com.xfor.passport.repository.jpa;
 
 import com.xfor.infrastructure.service.ServiceContext;
 import com.xfor.passport.repository.IPassportAuthRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class JpaPassportAuthRepository implements IPassportAuthRepository {
 
+    @Autowired
     private IPassportAuthJpaDAO passportAuthJpaDAO;
 
     public JpaPassportAuthRepository(IPassportAuthJpaDAO passportAuthJpaDAO) {
