@@ -3,10 +3,12 @@ package com.xfor.passport.repository.jpa;
 import com.xfor.infrastructure.service.ServiceContext;
 import com.xfor.passport.model.Passport;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  */
+@Repository
 public interface IPassportJpaDAO extends JpaRepository<Passport, String> {
 
     Passport findFirstBySID(String sid);

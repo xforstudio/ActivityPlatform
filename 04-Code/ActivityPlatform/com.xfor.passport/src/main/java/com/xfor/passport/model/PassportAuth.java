@@ -1,8 +1,12 @@
 package com.xfor.passport.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * 通行证授权
  */
+@Entity
 public class PassportAuth {
 
     private String sid;
@@ -14,6 +18,7 @@ public class PassportAuth {
     public PassportAuth() {
     }
 
+    @Id
     public String getSID() {
         return sid;
     }

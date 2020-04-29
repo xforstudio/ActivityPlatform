@@ -5,8 +5,10 @@ import com.xfor.infrastructure.service.ServiceContext;
 import com.xfor.passport.repository.IPassportAuthCategoryRepository;
 import com.xfor.passport.repository.IPassportAuthRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public class PassportAuthManageService extends BaseService implements IPassportAuthManageService {
+@Service
+public class PassportAuthManageService extends BaseService {
 
     @Autowired
     private IPassportAuthRepository passportAuthRepository;

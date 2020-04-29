@@ -2,10 +2,12 @@ package com.xfor.passport.repository;
 
 import com.xfor.infrastructure.service.ServiceContext;
 import com.xfor.passport.model.Passport;
+import org.springframework.stereotype.Component;
 
 /**
  *
  */
+@Component
 public interface IPassportRepository {
 
     Passport getPassportBySID(ServiceContext sctx, String sid);
