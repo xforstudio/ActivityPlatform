@@ -16,14 +16,15 @@ public class PassportAuthManageService extends BaseService {
     private IPassportAuthCategoryRepository passportAuthCategoryRepository;
 
     public PassportAuthManageService() {
+        super();
     }
 
-    public PassportAuthManageService(
-            IPassportAuthRepository passportAuthRepository,
-            IPassportAuthCategoryRepository passportAuthCategoryRepository) {
-        this.passportAuthRepository = passportAuthRepository;
-        this.passportAuthCategoryRepository = passportAuthCategoryRepository;
-    }
+//    public PassportAuthManageService(
+//            IPassportAuthRepository passportAuthRepository,
+//            IPassportAuthCategoryRepository passportAuthCategoryRepository) {
+//        this.passportAuthRepository = passportAuthRepository;
+//        this.passportAuthCategoryRepository = passportAuthCategoryRepository;
+//    }
 
     public String getLoginTokenByPassportAuthCode(String passportAuthCode, String categoryID) {
         ServiceContext sctx = this.doGetServiceContext();

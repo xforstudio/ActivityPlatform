@@ -13,9 +13,9 @@ public class JpaPassportRepository implements IPassportRepository {
     public JpaPassportRepository() {
     }
 
-    public JpaPassportRepository(IPassportJpaDAO passportJpaDAO) {
-        this.passportJpaDAO = passportJpaDAO;
-    }
+//    public JpaPassportRepository(IPassportJpaDAO passportJpaDAO) {
+//        this.passportJpaDAO = passportJpaDAO;
+//    }
 
     public Passport getPassportBySID(ServiceContext sctx, String sid) {
         //throw new UnsupportedOperationException();

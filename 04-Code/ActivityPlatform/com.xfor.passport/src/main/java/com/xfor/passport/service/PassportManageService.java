@@ -32,28 +32,29 @@ public class PassportManageService extends BaseService {
     private IDateTimeProvider dateTimeProvider;
 
     public PassportManageService() {
+        super();
     }
 
-    public PassportManageService(
-        IPassportRepository passportRepository,
-        IPassportAuthRepository passportAuthRepository,
-        IPassportAuthCategoryRepository passportAuthCategoryRepository,
-        IPassportIDRepository passportIDRepository,
-        ISmsService smsService,
-        IEmailService emailService,
-        ITextCaptchaLogService textCaptchaLogService,
-        IDateTimeProvider dateTimeProvider)
-    {
-        super();
-        this.passportRepository = passportRepository;
-        this.passportAuthRepository = passportAuthRepository;
-        this.passportAuthCategoryRepository = passportAuthCategoryRepository;
-        this.passportIDRepository = passportIDRepository;
-        this.smsService = smsService;
-        this.emailService = emailService;
-        this.textCaptchaLogService = textCaptchaLogService;
-        this.dateTimeProvider = dateTimeProvider;
-    }
+//    public PassportManageService(
+//        IPassportRepository passportRepository,
+//        IPassportAuthRepository passportAuthRepository,
+//        IPassportAuthCategoryRepository passportAuthCategoryRepository,
+//        IPassportIDRepository passportIDRepository,
+//        ISmsService smsService,
+//        IEmailService emailService,
+//        ITextCaptchaLogService textCaptchaLogService,
+//        IDateTimeProvider dateTimeProvider)
+//    {
+//        super();
+//        this.passportRepository = passportRepository;
+//        this.passportAuthRepository = passportAuthRepository;
+//        this.passportAuthCategoryRepository = passportAuthCategoryRepository;
+//        this.passportIDRepository = passportIDRepository;
+//        this.smsService = smsService;
+//        this.emailService = emailService;
+//        this.textCaptchaLogService = textCaptchaLogService;
+//        this.dateTimeProvider = dateTimeProvider;
+//    }
 
     //发送短信验证码
     protected void doSendSmsCaptcha(String mobile, String category) {

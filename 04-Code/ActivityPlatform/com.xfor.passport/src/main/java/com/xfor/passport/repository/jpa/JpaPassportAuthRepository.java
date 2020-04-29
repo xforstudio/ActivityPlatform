@@ -5,7 +5,6 @@ import com.xfor.passport.repository.IPassportAuthRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-@Repository
 public class JpaPassportAuthRepository implements IPassportAuthRepository {
 
     @Autowired
@@ -14,9 +13,9 @@ public class JpaPassportAuthRepository implements IPassportAuthRepository {
     public JpaPassportAuthRepository() {
     }
 
-    public JpaPassportAuthRepository(IPassportAuthJpaDAO passportAuthJpaDAO) {
-        this.passportAuthJpaDAO = passportAuthJpaDAO;
-    }
+//    public JpaPassportAuthRepository(IPassportAuthJpaDAO passportAuthJpaDAO) {
+//        this.passportAuthJpaDAO = passportAuthJpaDAO;
+//    }
 
     public String getLoginTokenByPassportAuthCode(
             ServiceContext sctx,

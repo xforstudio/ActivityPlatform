@@ -2,10 +2,7 @@ package com.xfor.passport.controller.api;
 
 import com.xfor.passport.service.PassportAuthManageService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class PassportAuthManageApiController {
@@ -16,22 +13,14 @@ public class PassportAuthManageApiController {
     public PassportAuthManageApiController() {
     }
 
-    public PassportAuthManageApiController(PassportAuthManageService passportAuthManageService) {
-        this.passportAuthManageService = passportAuthManageService;
-    }
-
-    @RequestMapping(value = "/getLoginTokenByPassportAuthCode/{passportAuthCode}/{categoryID}",method = RequestMethod.POST)
-    public String getLoginTokenByPassportAuthCode(
-            @PathVariable String passportAuthCode,
-            @PathVariable String categoryID) {
+    @PostMapping(value = "/getLoginTokenByPassportAuthCode", produces = "application/json;charset=UTF-8")
+    public String getLoginTokenByPassportAuthCode(@RequestParam String passportAuthCode, @RequestParam String categoryID) {
         var result = this.passportAuthManageService.getLoginTokenByPassportAuthCode(passportAuthCode, categoryID);
         return result;
     }
 
-    @RequestMapping(value = "/getPassportAuthCodeByLoginToken/{loginToken}/{categoryID}",method = RequestMethod.POST)
-    public String getPassportAuthCodeByLoginToken(
-            @PathVariable String loginToken,
-            @PathVariable String categoryID) {
+    @PostMapping(value = "/getPassportAuthCodeByLoginToken", produces = "application/json;charset=UTF-8")
+    public String getPassportAuthCodeByLoginToken(@RequestParam String loginToken, @RequestParam String categoryID) {
         var result = this.passportAuthManageService.getPassportAuthCodeByLoginToken(loginToken, categoryID);
         return result;
     }
