@@ -1,7 +1,12 @@
 package com.xfor.infrastructure.service.impl.stub;
 
 import com.xfor.infrastructure.service.ITextCaptchaLogService;
+import org.springframework.stereotype.Component;
 
+/**
+ *
+ */
+@Component
 public class StubTextCaptchaLogService implements ITextCaptchaLogService {
 
     @Override

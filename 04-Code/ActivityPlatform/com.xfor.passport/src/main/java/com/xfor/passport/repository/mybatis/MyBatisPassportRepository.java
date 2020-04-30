@@ -4,10 +4,12 @@ import com.xfor.infrastructure.service.ServiceContext;
 import com.xfor.passport.model.Passport;
 import com.xfor.passport.repository.IPassportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /**
  *
  */
+@Component
 public class MyBatisPassportRepository implements IPassportRepository {
 
     @Autowired

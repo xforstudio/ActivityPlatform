@@ -20,10 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7637a34b-c1a1-47a3-b084-436cdd67f81d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_0_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.infrastructure/src/main/java/com/xfor/infrastructure/model/SystemDateTimeProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.infrastructure/src/main/java/com/xfor/infrastructure/model/SystemDateTimeProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.infrastructure/src/main/java/com/xfor/infrastructure/service/impl/stub/StubEmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.infrastructure/src/main/java/com/xfor/infrastructure/service/impl/stub/StubEmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.infrastructure/src/main/java/com/xfor/infrastructure/service/impl/stub/StubSmsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.infrastructure/src/main/java/com/xfor/infrastructure/service/impl/stub/StubSmsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.infrastructure/src/main/java/com/xfor/infrastructure/service/impl/stub/StubTextCaptchaLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.infrastructure/src/main/java/com/xfor/infrastructure/service/impl/stub/StubTextCaptchaLogService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.xfor.passport/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/XforPassportApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/XforPassportApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/jpa/IPassportAuthCategoryJpaDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/jpa/IPassportAuthJpaDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/jpa/IPassportIDJpaDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/jpa/IPassportJpaDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/jpa/JpaPassportAuthCategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/jpa/JpaPassportAuthRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/jpa/JpaPassportIDRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/jpa/JpaPassportRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/IPassportAuthCategoryMyBatisDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/IPassportAuthCategoryMyBatisDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/IPassportAuthMyBatisDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/IPassportAuthMyBatisDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/IPassportIDMyBatisDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/IPassportIDMyBatisDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/IPassportMyBatisDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/IPassportMyBatisDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/MyBatisPassportAuthCategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/MyBatisPassportAuthCategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/MyBatisPassportAuthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/MyBatisPassportAuthRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/MyBatisPassportIDRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/MyBatisPassportIDRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/MyBatisPassportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/MyBatisPassportRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/test/java/com/xfor/passport/repository/jpa/JpaPassportRepositoryTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +59,8 @@
       <list>
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -91,7 +115,7 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JpaPassportRepositoryTests.getPassportBySID">
+  <component name="RunManager" selected="JUnit.MyBatisPassportRepositoryTests.getPassportBySID">
     <configuration name="JpaPassportRepositoryTests.getPassportBySID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="com.xfor.passport" />
       <extension name="coverage">
@@ -102,6 +126,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.xfor.passport.repository.jpa" />
       <option name="MAIN_CLASS_NAME" value="com.xfor.passport.repository.jpa.JpaPassportRepositoryTests" />
+      <option name="METHOD_NAME" value="getPassportBySID" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBatisPassportRepositoryTests.getPassportBySID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="com.xfor.passport" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xfor.passport.repository.mybatis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xfor.passport.repository.mybatis" />
+      <option name="MAIN_CLASS_NAME" value="com.xfor.passport.repository.mybatis.MyBatisPassportRepositoryTests" />
       <option name="METHOD_NAME" value="getPassportBySID" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -138,6 +178,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyBatisPassportRepositoryTests.getPassportBySID" />
         <item itemvalue="JUnit.JpaPassportRepositoryTests.getPassportBySID" />
       </list>
     </recent_temporary>
@@ -161,7 +202,7 @@
       <workItem from="1587957898943" duration="11009000" />
       <workItem from="1587986831862" duration="33007000" />
       <workItem from="1588140525566" duration="8114000" />
-      <workItem from="1588162224403" duration="8170000" />
+      <workItem from="1588162224403" duration="15363000" />
     </task>
     <servers />
   </component>
@@ -210,45 +251,45 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="570" y="251" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1588146925838" />
-    <state width="1493" height="309" key="GridCell.Tab.0.bottom" timestamp="1588171202760">
+    <state width="1493" height="343" key="GridCell.Tab.0.bottom" timestamp="1588254265595">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="309" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588171202760" />
+    <state width="1493" height="343" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588254265595" />
     <state width="1259" height="344" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018984" />
-    <state width="1493" height="309" key="GridCell.Tab.0.center" timestamp="1588171202759">
+    <state width="1493" height="343" key="GridCell.Tab.0.center" timestamp="1588254265595">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="309" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588171202759" />
+    <state width="1493" height="343" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588254265595" />
     <state width="1259" height="344" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018984" />
-    <state width="1493" height="309" key="GridCell.Tab.0.left" timestamp="1588171202759">
+    <state width="1493" height="343" key="GridCell.Tab.0.left" timestamp="1588254265595">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="309" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588171202759" />
+    <state width="1493" height="343" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588254265595" />
     <state width="1259" height="344" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018982" />
-    <state width="1493" height="309" key="GridCell.Tab.0.right" timestamp="1588171202760">
+    <state width="1493" height="343" key="GridCell.Tab.0.right" timestamp="1588254265595">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="309" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588171202760" />
+    <state width="1493" height="343" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588254265595" />
     <state width="1259" height="344" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018984" />
-    <state width="1493" height="309" key="GridCell.Tab.1.bottom" timestamp="1588171202761">
+    <state width="1493" height="343" key="GridCell.Tab.1.bottom" timestamp="1588254265228">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="309" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588171202761" />
+    <state width="1493" height="343" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588254265228" />
     <state width="1259" height="344" key="GridCell.Tab.1.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018985" />
-    <state width="1493" height="309" key="GridCell.Tab.1.center" timestamp="1588171202761">
+    <state width="1493" height="343" key="GridCell.Tab.1.center" timestamp="1588254265228">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="309" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588171202761" />
+    <state width="1493" height="343" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588254265228" />
     <state width="1259" height="344" key="GridCell.Tab.1.center/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018985" />
-    <state width="1493" height="309" key="GridCell.Tab.1.left" timestamp="1588171202760">
+    <state width="1493" height="343" key="GridCell.Tab.1.left" timestamp="1588254265228">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="309" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588171202760" />
+    <state width="1493" height="343" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588254265228" />
     <state width="1259" height="344" key="GridCell.Tab.1.left/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018984" />
-    <state width="1493" height="309" key="GridCell.Tab.1.right" timestamp="1588171202761">
+    <state width="1493" height="343" key="GridCell.Tab.1.right" timestamp="1588254265228">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="309" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588171202761" />
+    <state width="1493" height="343" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588254265228" />
     <state width="1259" height="344" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018985" />
     <state width="1493" height="236" key="GridCell.Tab.2.bottom" timestamp="1588090032713">
       <screen x="0" y="0" width="1536" height="824" />
@@ -284,10 +325,10 @@
     </state>
     <state x="178" y="72" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1587913428088" />
     <state x="414" y="124" key="new project wizard/0.0.1680.1010@0.0.1680.1010" timestamp="1587966819449" />
-    <state x="465" y="229" width="735" height="830" key="run.anything.popup" timestamp="1587955709134">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1588229664572">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587915355756" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1588229664572" />
     <state x="465" y="229" width="735" height="830" key="run.anything.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1587955709134" />
     <state x="460" y="177" width="672" height="554" key="search.everywhere.popup" timestamp="1587996674442">
       <screen x="0" y="0" width="1536" height="824" />
@@ -307,6 +348,11 @@
           <url>file://$PROJECT_DIR$/com.xfor.passport/src/test/java/com/xfor/passport/repository/jpa/JpaPassportRepositoryTests.java</url>
           <line>31</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/com.xfor.passport/src/test/java/com/xfor/passport/repository/mybatis/MyBatisPassportRepositoryTests.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

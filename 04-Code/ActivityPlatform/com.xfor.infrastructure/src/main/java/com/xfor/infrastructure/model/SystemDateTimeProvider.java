@@ -1,7 +1,13 @@
 package com.xfor.infrastructure.model;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Date;
 
+/**
+ *
+ */
+@Component
 public class SystemDateTimeProvider implements IDateTimeProvider {
 
     private static SystemDateTimeProvider _instance;
