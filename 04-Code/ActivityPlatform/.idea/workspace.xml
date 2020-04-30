@@ -20,17 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7637a34b-c1a1-47a3-b084-436cdd67f81d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.infrastructure/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.infrastructure/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/controller/api/PassportAuthManageApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/controller/api/PassportAuthManageApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/controller/api/PassportManageApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/controller/api/PassportManageApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/IPassportAuthCategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/IPassportAuthCategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/IPassportIDRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/IPassportIDRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/jpa/JpaPassportAuthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/jpa/JpaPassportAuthRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/jpa/JpaPassportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/jpa/JpaPassportRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/service/PassportAuthManageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/service/PassportAuthManageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/service/PassportManageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/service/PassportManageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/XforPassportApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/XforPassportApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +34,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -168,7 +161,7 @@
       <workItem from="1587957898943" duration="11009000" />
       <workItem from="1587986831862" duration="33007000" />
       <workItem from="1588140525566" duration="8114000" />
-      <workItem from="1588162224403" duration="3681000" />
+      <workItem from="1588162224403" duration="8170000" />
     </task>
     <servers />
   </component>
@@ -217,45 +210,45 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="570" y="251" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1588146925838" />
-    <state width="1493" height="309" key="GridCell.Tab.0.bottom" timestamp="1588168649584">
+    <state width="1493" height="309" key="GridCell.Tab.0.bottom" timestamp="1588171202760">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="309" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588168649584" />
+    <state width="1493" height="309" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588171202760" />
     <state width="1259" height="344" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018984" />
-    <state width="1493" height="309" key="GridCell.Tab.0.center" timestamp="1588168649583">
+    <state width="1493" height="309" key="GridCell.Tab.0.center" timestamp="1588171202759">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="309" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588168649583" />
+    <state width="1493" height="309" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588171202759" />
     <state width="1259" height="344" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018984" />
-    <state width="1493" height="309" key="GridCell.Tab.0.left" timestamp="1588168649582">
+    <state width="1493" height="309" key="GridCell.Tab.0.left" timestamp="1588171202759">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="309" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588168649582" />
+    <state width="1493" height="309" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588171202759" />
     <state width="1259" height="344" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018982" />
-    <state width="1493" height="309" key="GridCell.Tab.0.right" timestamp="1588168649584">
+    <state width="1493" height="309" key="GridCell.Tab.0.right" timestamp="1588171202760">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="309" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588168649584" />
+    <state width="1493" height="309" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588171202760" />
     <state width="1259" height="344" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018984" />
-    <state width="1493" height="309" key="GridCell.Tab.1.bottom" timestamp="1588168649140">
+    <state width="1493" height="309" key="GridCell.Tab.1.bottom" timestamp="1588171202761">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="309" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588168649140" />
+    <state width="1493" height="309" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588171202761" />
     <state width="1259" height="344" key="GridCell.Tab.1.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018985" />
-    <state width="1493" height="309" key="GridCell.Tab.1.center" timestamp="1588168649140">
+    <state width="1493" height="309" key="GridCell.Tab.1.center" timestamp="1588171202761">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="309" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588168649140" />
+    <state width="1493" height="309" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588171202761" />
     <state width="1259" height="344" key="GridCell.Tab.1.center/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018985" />
-    <state width="1493" height="309" key="GridCell.Tab.1.left" timestamp="1588168649140">
+    <state width="1493" height="309" key="GridCell.Tab.1.left" timestamp="1588171202760">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="309" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588168649140" />
+    <state width="1493" height="309" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588171202760" />
     <state width="1259" height="344" key="GridCell.Tab.1.left/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018984" />
-    <state width="1493" height="309" key="GridCell.Tab.1.right" timestamp="1588168649140">
+    <state width="1493" height="309" key="GridCell.Tab.1.right" timestamp="1588171202761">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="309" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588168649140" />
+    <state width="1493" height="309" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588171202761" />
     <state width="1259" height="344" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018985" />
     <state width="1493" height="236" key="GridCell.Tab.2.bottom" timestamp="1588090032713">
       <screen x="0" y="0" width="1536" height="824" />
