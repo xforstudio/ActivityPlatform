@@ -3,6 +3,7 @@ package com.xfor.passport.repository.mybatis;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.xfor.passport.model.Passport;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Repository;
 @Mapper
 public interface IPassportMyBatisDAO extends BaseMapper<Passport> {
 
+    @Select("SELECT * FROM PASSPORT WHERE SID=#{sid}")
     Passport findFirstBySID(String sid);
 
     Passport findFirstBySN(String sn);

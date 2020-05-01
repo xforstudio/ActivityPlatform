@@ -12,7 +12,7 @@ public class PassportAuth {
     private String sid;
     private String passportSID;  //通行证唯一标识
     private String categoryID;  //授权类别标识
-    private PassportAuthStateEnum state = PassportAuthStateEnum.None;  //授权状态
+    private int state = PassportAuthStateEnum.None;  //授权状态
     private String code;  //授权码
 
     public PassportAuth() {
@@ -43,11 +43,11 @@ public class PassportAuth {
         this.categoryID = categoryID;
     }
 
-    public PassportAuthStateEnum getState() {
+    public int getState() {
         return state;
     }
 
-    public void setState(PassportAuthStateEnum state) {
+    public void setState(int state) {
         this.state = state;
     }
 

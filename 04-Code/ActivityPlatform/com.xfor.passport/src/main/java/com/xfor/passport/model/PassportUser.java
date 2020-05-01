@@ -9,7 +9,7 @@ public class PassportUser {
 
     private String passportSID;
     private String name;
-    private SexEnum sex;
+    private int sex;
 
     public PassportUser() {
     }
@@ -30,11 +30,11 @@ public class PassportUser {
         this.name = name;
     }
 
-    public SexEnum getSex() {
+    public int getSex() {
         return sex;
     }
 
-    public void setSex(SexEnum sex) {
+    public void setSex(int sex) {
         this.sex = sex;
     }
 }

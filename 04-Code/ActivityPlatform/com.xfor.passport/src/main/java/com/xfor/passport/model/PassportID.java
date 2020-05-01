@@ -9,7 +9,7 @@ public class PassportID {
 
     private String sid;
     private String passportSID;  //通行证唯一标识
-    private IDTypeNOEnum idTypeNO;  //证件类型编号
+    private int idTypeNO;  //证件类型编号
     private String idCode;  //证件号
     private boolean primary;  //是否为首选证件
 
@@ -29,11 +29,11 @@ public class PassportID {
         this.passportSID = passportSID;
     }
 
-    public IDTypeNOEnum getIDTypeNO() {
+    public int getIDTypeNO() {
         return idTypeNO;
     }
 
-    public void setIDTypeNO(IDTypeNOEnum idTypeNO) {
+    public void setIDTypeNO(int idTypeNO) {
         this.idTypeNO = idTypeNO;
     }
 

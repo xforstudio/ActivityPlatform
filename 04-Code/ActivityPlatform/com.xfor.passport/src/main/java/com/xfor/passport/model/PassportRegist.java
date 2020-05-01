@@ -12,8 +12,8 @@ import com.xfor.infrastructure.util.StringUtil;
 public class PassportRegist {
 
     private String name;  //姓名
-    private SexEnum sex = SexEnum.None;  //性别
-    private IDTypeNOEnum idTypeNO = IDTypeNOEnum.None;  //首选证件类型编号
+    private int sex = SexEnum.None;  //性别
+    private int idTypeNO = IDTypeNOEnum.None;  //首选证件类型编号
     private String idCode;  //首选证件号
     private String mobile;  //手机号码
     private String email;  //电子邮件
@@ -70,19 +70,19 @@ public class PassportRegist {
         this.name = name;
     }
 
-    public SexEnum getSex() {
+    public int getSex() {
         return sex;
     }
 
-    public void setSex(SexEnum sex) {
+    public void setSex(int sex) {
         this.sex = sex;
     }
 
-    public IDTypeNOEnum getIDTypeNO() {
+    public int getIDTypeNO() {
         return idTypeNO;
     }
 
-    public void setIDTypeNO(IDTypeNOEnum idTypeNO) {
+    public void setIDTypeNO(int idTypeNO) {
         this.idTypeNO = idTypeNO;
     }
 

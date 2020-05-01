@@ -1,8 +1,13 @@
 package com.xfor.passport.model;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.xfor.infrastructure.model.*;
 import com.xfor.infrastructure.util.RandomUtil;
 import com.xfor.infrastructure.util.StringUtil;
+import lombok.Data;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -10,6 +15,8 @@ import java.util.Date;
 /**
  * 通行证
  */
+@Data
+@TableName("PASSPORT")
 public class Passport {
 
     public static void _validatePassword(String password) {
@@ -27,23 +34,46 @@ public class Passport {
         return timeText + seqText;
     }
 
+    @TableId("SID") // 数据库主键字段
     private String sid;  //唯一标识
+    @TableField("SN")
     private String sn;  //编号
+    @TableField("NAME")
     private String name;  //姓名
-    private SexEnum sex;  //性别
-    private IDTypeNOEnum idTypeNO;  //首选证件类型编号
+    @TableField("SEX")
+    private int sex;  //性别
+    @TableField("ID_TYPE_NO")
+    private int idTypeNO;  //首选证件类型编号
+    @TableField("ID_CODE")
     private String idCode;  //首选证件号
+    @TableField("MOBILE")
     private String mobile;  //手机号码
-    private PassportCheckStateEnum mobileCheckState;  //手机号验证状态
+    @TableField("MOBILE_CHECK_STATE")
+    private int mobileCheckState;  //手机号验证状态
+    @TableField("MOBILE_CHECK_TIME")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss") // 日期格式自动化
     private Date mobileCheckTime;  //手机号验证时间
+    @TableField("EMAIL")
     private String email;  //电子邮件
-    private PassportCheckStateEnum emailCheckState;  //电子邮件验证状态
+    @TableField("EMAIL_CHECK_STATE")
+    private int emailCheckState;  //电子邮件验证状态
+    @TableField("EMAIL_CHECK_TIME")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss") // 日期格式自动化
     private Date emailCheckTime;  //电子邮件验证时间
+    @TableField("USERNAME")
     private String username;
+    @TableField("PASSWORD")
     private String password;
+    @TableField("CREATE_TIME")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss") // 日期格式自动化
     private Date createTime;
+    @TableField("MODIFY_TIME")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss") // 日期格式自动化
     private Date modifyTime;
+    @TableField("LOGIN_TOKEN")
     private String loginToken;
+    @TableField("LOGIN_TIME")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss") // 日期格式自动化
     private Date loginTime;
 
     public Passport() {
@@ -75,14 +105,14 @@ public class Passport {
         this.setModifyTime(dateTimeProvider.getNow());
     }
 
-    public void setMobile(String mobile, PassportCheckStateEnum checkState, IDateTimeProvider dateTimeProvider) {
+    public void setMobile(String mobile, int checkState, IDateTimeProvider dateTimeProvider) {
         this.setMobile(mobile);
         this.setMobileCheckState(checkState);
         this.setMobileCheckTime(dateTimeProvider.getNow());
         this.setModifyTime(this.getMobileCheckTime());
     }
 
-    public void setEmail(String email, PassportCheckStateEnum checkState, IDateTimeProvider dateTimeProvider) {
+    public void setEmail(String email, int checkState, IDateTimeProvider dateTimeProvider) {
         this.setEmail(email);
         this.setEmailCheckState(checkState);
         this.setEmailCheckTime(dateTimeProvider.getNow());
@@ -155,19 +185,19 @@ public class Passport {
         this.name = name;
     }
 
-    public SexEnum getSex() {
+    public int getSex() {
         return sex;
     }
 
-    public void setSex(SexEnum sex) {
+    public void setSex(int sex) {
         this.sex = sex;
     }
 
-    public IDTypeNOEnum getIDTypeNO() {
+    public int getIDTypeNO() {
         return idTypeNO;
     }
 
-    public void setIDTypeNO(IDTypeNOEnum idTypeNO) {
+    public void setIDTypeNO(int idTypeNO) {
         this.idTypeNO = idTypeNO;
     }
 
@@ -187,11 +217,11 @@ public class Passport {
         this.mobile = mobile;
     }
 
-    public PassportCheckStateEnum getMobileCheckState() {
+    public int getMobileCheckState() {
         return mobileCheckState;
     }
 
-    public void setMobileCheckState(PassportCheckStateEnum mobileCheckState) {
+    public void setMobileCheckState(int mobileCheckState) {
         this.mobileCheckState = mobileCheckState;
     }
 
@@ -211,11 +241,11 @@ public class Passport {
         this.email = email;
     }
 
-    public PassportCheckStateEnum getEmailCheckState() {
+    public int getEmailCheckState() {
         return emailCheckState;
     }
 
-    public void setEmailCheckState(PassportCheckStateEnum emailCheckState) {
+    public void setEmailCheckState(int emailCheckState) {
         this.emailCheckState = emailCheckState;
     }
 
