@@ -21,18 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7637a34b-c1a1-47a3-b084-436cdd67f81d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.infrastructure/src/main/java/com/xfor/infrastructure/model/IDTypeNOEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.infrastructure/src/main/java/com/xfor/infrastructure/model/IDTypeNOEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.infrastructure/src/main/java/com/xfor/infrastructure/model/Sex.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.infrastructure/src/main/java/com/xfor/infrastructure/model/Sex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.infrastructure/src/main/java/com/xfor/infrastructure/model/SexEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.infrastructure/src/main/java/com/xfor/infrastructure/model/SexEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/Passport.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/Passport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportAuth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportAuthCategoryStateEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportAuthCategoryStateEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportAuthStateEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportAuthStateEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportCheckStateEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportCheckStateEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportID.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportRegist.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportRegist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/model/PassportUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/IPassportAuthMyBatisDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/IPassportAuthMyBatisDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/IPassportMyBatisDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/IPassportMyBatisDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/MyBatisPassportAuthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/MyBatisPassportAuthRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/test/java/com/xfor/passport/repository/mybatis/MyBatisPassportRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/test/java/com/xfor/passport/repository/mybatis/MyBatisPassportRepositoryTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +35,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -86,6 +78,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.xfor.passport.repository.mybatis" />
       <recent name="com.xfor.passport.repository.jpa" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -187,7 +180,7 @@
       <workItem from="1587957898943" duration="11009000" />
       <workItem from="1587986831862" duration="33007000" />
       <workItem from="1588140525566" duration="8114000" />
-      <workItem from="1588162224403" duration="18869000" />
+      <workItem from="1588162224403" duration="24219000" />
     </task>
     <servers />
   </component>
@@ -236,45 +229,49 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="570" y="251" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1588146925838" />
-    <state width="1493" height="234" key="GridCell.Tab.0.bottom" timestamp="1588312290824">
+    <state width="416" height="466" key="DebuggerActiveHint" timestamp="1588312709119">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="234" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588312290824" />
+    <state width="416" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1588312709119" />
+    <state width="1493" height="234" key="GridCell.Tab.0.bottom" timestamp="1588312625223">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="234" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588312625223" />
     <state width="1259" height="344" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018984" />
-    <state width="1493" height="234" key="GridCell.Tab.0.center" timestamp="1588312290824">
+    <state width="1493" height="234" key="GridCell.Tab.0.center" timestamp="1588312625223">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="234" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588312290824" />
+    <state width="1493" height="234" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588312625223" />
     <state width="1259" height="344" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018984" />
-    <state width="1493" height="234" key="GridCell.Tab.0.left" timestamp="1588312290824">
+    <state width="1493" height="234" key="GridCell.Tab.0.left" timestamp="1588312625223">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="234" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588312290824" />
+    <state width="1493" height="234" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588312625223" />
     <state width="1259" height="344" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018982" />
-    <state width="1493" height="234" key="GridCell.Tab.0.right" timestamp="1588312290824">
+    <state width="1493" height="234" key="GridCell.Tab.0.right" timestamp="1588312625223">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="234" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588312290824" />
+    <state width="1493" height="234" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588312625223" />
     <state width="1259" height="344" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018984" />
-    <state width="1493" height="234" key="GridCell.Tab.1.bottom" timestamp="1588312290824">
+    <state width="1493" height="234" key="GridCell.Tab.1.bottom" timestamp="1588312644818">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="234" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588312290824" />
+    <state width="1493" height="234" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588312644818" />
     <state width="1259" height="344" key="GridCell.Tab.1.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018985" />
-    <state width="1493" height="234" key="GridCell.Tab.1.center" timestamp="1588312290824">
+    <state width="1493" height="234" key="GridCell.Tab.1.center" timestamp="1588312644818">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="234" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588312290824" />
+    <state width="1493" height="234" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588312644818" />
     <state width="1259" height="344" key="GridCell.Tab.1.center/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018985" />
-    <state width="1493" height="234" key="GridCell.Tab.1.left" timestamp="1588312290824">
+    <state width="1493" height="234" key="GridCell.Tab.1.left" timestamp="1588312644816">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="234" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588312290824" />
+    <state width="1493" height="234" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588312644816" />
     <state width="1259" height="344" key="GridCell.Tab.1.left/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018984" />
-    <state width="1493" height="234" key="GridCell.Tab.1.right" timestamp="1588312290824">
+    <state width="1493" height="234" key="GridCell.Tab.1.right" timestamp="1588312644818">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="234" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588312290824" />
+    <state width="1493" height="234" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588312644818" />
     <state width="1259" height="344" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1588150018985" />
     <state width="1493" height="236" key="GridCell.Tab.2.bottom" timestamp="1588090032713">
       <screen x="0" y="0" width="1536" height="824" />
@@ -301,10 +298,10 @@
     </state>
     <state x="310" y="75" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588088347018" />
     <state x="339" y="92" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1588143364764" />
-    <state x="518" y="88" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588088571072">
+    <state x="518" y="88" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588764707415">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="518" y="88" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1588088571070" />
+    <state x="518" y="88" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1588764707415" />
     <state x="414" y="124" key="new project wizard" timestamp="1587966819449">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -315,10 +312,10 @@
     </state>
     <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1588229664572" />
     <state x="465" y="229" width="735" height="830" key="run.anything.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1587955709134" />
-    <state x="460" y="177" width="672" height="554" key="search.everywhere.popup" timestamp="1587996674442">
+    <state x="460" y="177" width="672" height="554" key="search.everywhere.popup" timestamp="1588749703873">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="460" y="177" width="672" height="554" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587996674442" />
+    <state x="460" y="177" width="672" height="554" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588749703873" />
     <state x="503" y="217" width="672" height="678" key="search.everywhere.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1587972306329" />
   </component>
   <component name="XDebuggerManager">

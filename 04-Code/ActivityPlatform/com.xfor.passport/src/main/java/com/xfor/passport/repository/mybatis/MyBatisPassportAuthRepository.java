@@ -21,21 +21,21 @@ public class MyBatisPassportAuthRepository implements IPassportAuthRepository {
             ServiceContext sctx,
             String passportAuthCode,
             String categoryID) {
-        throw new UnsupportedOperationException();
-//        String loginToken = this.passportAuthJpaDAO.findLoginTokenByPassportAuthCodeAndCategoryID(
-//                passportAuthCode,
-//                categoryID);
-//        return loginToken;
+        //throw new UnsupportedOperationException();
+        String loginToken = this.passportAuthMyBatisDAO.findLoginTokenByPassportAuthCodeAndCategoryID(
+                passportAuthCode,
+                categoryID);
+        return loginToken;
     }
 
     public String getPassportAuthCodeByLoginToken(
             ServiceContext sctx,
             String loginToken,
             String categoryID) {
-        throw new UnsupportedOperationException();
-//        String passportAuthCode = this.passportAuthJpaDAO.findPassportAuthCodeByLoginTokenAndCategoryID(
-//                loginToken,
-//                categoryID);
-//        return passportAuthCode;
+        //throw new UnsupportedOperationException();
+        String passportAuthCode = this.passportAuthMyBatisDAO.findPassportAuthCodeByLoginTokenAndCategoryID(
+                loginToken,
+                categoryID);
+        return passportAuthCode;
     }
 }
