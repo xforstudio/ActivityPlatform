@@ -20,11 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7637a34b-c1a1-47a3-b084-436cdd67f81d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_19.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/IPassportAuthMyBatisDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/IPassportAuthMyBatisDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/IPassportMyBatisDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/IPassportMyBatisDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/MyBatisPassportAuthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/main/java/com/xfor/passport/repository/mybatis/MyBatisPassportAuthRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.xfor.passport/src/test/java/com/xfor/passport/repository/mybatis/MyBatisPassportRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.passport/src/test/java/com/xfor/passport/repository/mybatis/MyBatisPassportRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.payment/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.payment/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.xfor.payment/src/main/java/com/xfor/payment/XforPaymentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.xfor.payment/src/main/java/com/xfor/payment/XforPaymentApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +35,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -93,7 +93,7 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MyBatisPassportRepositoryTests.getPassportBySID">
+  <component name="RunManager" selected="Spring Boot.XforPaymentApplication">
     <configuration name="JpaPassportRepositoryTests.getPassportBySID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="com.xfor.passport" />
       <extension name="coverage">
@@ -181,6 +181,7 @@
       <workItem from="1587986831862" duration="33007000" />
       <workItem from="1588140525566" duration="8114000" />
       <workItem from="1588162224403" duration="24219000" />
+      <workItem from="1588816314598" duration="9804000" />
     </task>
     <servers />
   </component>
@@ -321,16 +322,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/com.xfor.passport/src/test/java/com/xfor/passport/repository/jpa/JpaPassportRepositoryTests.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/com.xfor.passport/src/test/java/com/xfor/passport/repository/jpa/JpaPassportRepositoryTests.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/com.xfor.passport/src/test/java/com/xfor/passport/repository/mybatis/MyBatisPassportRepositoryTests.java</url>
           <line>36</line>

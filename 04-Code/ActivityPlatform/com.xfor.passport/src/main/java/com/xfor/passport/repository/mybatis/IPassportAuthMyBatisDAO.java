@@ -12,9 +12,9 @@ import org.springframework.stereotype.Repository;
 @Mapper
 public interface IPassportAuthMyBatisDAO extends BaseMapper<PassportAuth> {
 
-    @Select("")
+    @Select("select p.LOGIN_TOKEN from PASSPORT p,PASSPORT_AUTH pa where p.SID=pa.PASSPORT_SID and pa.CODE=#{passportAuthCode} and pa.CATEGORY_ID=#{categoryID} limit 1")
     String findLoginTokenByPassportAuthCodeAndCategoryID(String passportAuthCode, String categoryID);
 
-    @Select("")
+    @Select("select pa.CODE from PASSPORT p,PASSPORT_AUTH pa where p.SID=pa.PASSPORT_SID and p.LOGIN_TOKEN=#{loginToken} and pa.CATEGORY_ID=#{categoryID} limit 1")
     String findPassportAuthCodeByLoginTokenAndCategoryID(String loginToken, String categoryID);
 }
