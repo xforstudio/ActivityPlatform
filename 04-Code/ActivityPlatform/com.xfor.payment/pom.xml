@@ -132,6 +132,13 @@
             <artifactId>alipay-sdk-java</artifactId>
             <version>4.9.124.ALL</version>
         </dependency>
+
+        <!-- Wxpay -->
+        <dependency>
+            <groupId>com.github.wxpay</groupId>
+            <artifactId>wxpay-sdk</artifactId>
+            <version>3.0.9</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -151,4 +158,11 @@
         </plugins>
     </build>
 
+    <repositories>
+        <repository>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
 </project>
